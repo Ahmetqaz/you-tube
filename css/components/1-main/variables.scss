@@ -1,0 +1,33 @@
+:root[data-theme="light"] {
+  --primary: #0b0b0e;
+  --primary-rgb: 11, 11, 14;
+  --white: #fff;
+  --gray: #f1f1f1;
+  --gray-2: #ada6ae;
+  --black: #0b0b0e;
+  --black-2: #282828;
+  --black-3-rgb: 0, 0, 0;
+}
+:root[data-theme="dark"] {
+  --primary: #fff;
+  --primary-rgb: 255, 255, 255;
+  --white: #0b0b0e;
+  --gray: #1b1b1b;
+  --gray-2: #ada6ae;
+  --black: #fff;
+  --black-2: #d7d7d7;
+  --black-3-rgb: 255, 255, 255;
+}
+
+$primary: var(--primary);
+$primary-rgb: var(--primary--rgb);
+$white: var(--white);
+$black: var(--black);
+$black-2: var(--black-2);
+$black-3-rgb: var(--black-3-rgb);
+$blue: var(--blue);
+$gray: var(--gray);
+$gray-2: var(--gray-2);
+
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Michroma", sans-serif;

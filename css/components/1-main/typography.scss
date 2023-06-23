@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+/* Typography */
+h1 {
+  font-size: 52px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 34px;
+}
+h4 {
+  font-size: 22px;
+  &._sm {
+    font-size: 18px;
+  }
+}
+h5 {
+  font-size: 16px;
+  &._sm {
+    font-size: 14px;
+  }
+}
+h6 {
+  font-size: 12px;
+  &._sm {
+    font-size: 8px;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+p {
+  line-height: 1em;
+  font-size: 14px;
+  &._lg {
+    font-size: 16px;
+  }
+  &._mid {
+    font-size: 12px;
+  }
+  &._sm {
+    font-size: 8px;
+  }
+}
