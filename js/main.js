@@ -38,6 +38,8 @@ if (header)
 /// tabEvents
 
 const themeCheck = document.getElementById("theme");
+const themeImage = document.getElementById("themeImage");
+
 themeCheck.onchange = function () {
   if (themeCheck.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
