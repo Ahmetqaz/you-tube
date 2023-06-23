@@ -5,19 +5,28 @@
         margin-bottom: 10px;
       }
     }
-    &-content {
-      padding: 24px 0;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 48px 20px;
+  }
+  &__row {
+    padding: 24px 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 48px 30px;
+    &._sm {
+      overflow: auto;
+      gap: 24px;
+      flex-wrap: nowrap;
+      .gridItem {
+        min-width: 300px;
+      }
+    
     }
   }
   &Item {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    width: calc(20% - 17px);
+    width: calc(20% - 25px);
     max-width: 300px;
     &__body {
       padding-bottom: 54%;
@@ -60,6 +69,102 @@
     }
   }
 }
+.video {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    &-content {
+      width: 100%;
+      padding-bottom: 32%;
+      position: relative;
+      border-radius: 10px;
+      overflow: auto;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h4 {
+        font-weight: 600;
+      }
+      .avatar {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        h5 {
+          color: $primary;
+          font-weight: 500;
+        }
+        h6 {
+          color: $gray-2;
+        }
+      }
+      .button {
+        margin-left: 12px;
+      }
+    }
+    &-body {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-buttons {
+      display: flex;
+      gap: 8px;
+    }
+    &-info {
+      padding: 12px;
+      background: rgba($black-3-rgb, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border-radius: 12px;
+      h5 {
+        font-weight: 500;
+      }
+    }
+    &-grid{
+      position: relative;
+      &::before {
+        content: "";
+        width: 130px;
+        height: 100%;
+        background: linear-gradient(270deg, $white 18.02%, rgba($black-3-rgb, 0.00) 100%);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+      }
+      
+    }
+    .button{
+      &--icoLg{
+        position: absolute;
+        bottom: 0;
+        right: -28px;
+        z-index: 2;
+      }
+    }
+  }
+}
 .row {
   position: relative;
   &__body {
@@ -79,38 +184,39 @@
     }
   }
   &._slider {
-    &::before {
-      content: "";
-      width: 80px;
-      height: 100%;
-      background: linear-gradient(
-        90deg,
-        rgba($white-rgb, 0) 0%,
-        rgba($white-rgb, 1) 100%
-      );
-      position: absolute;
-      right: 25px;
-      bottom: 0;
+      &::before {
+        content: "";
+        width: 130px;
+        height: 100%;
+        background: linear-gradient(270deg, $white 18.02%, rgba($black-3-rgb, 0.00) 100%);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+      }
+  }
+
+}
+.arrows {
+  font-size: 24px;
+  .next {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    z-index: 2;
+    font-size: inherit;
+    @include transition;
+    cursor: pointer;
+    .ico{
+      font-size: inherit;
     }
-    &::after {
-      content: "";
-      width: 40px;
-      height: 100%;
-      background: $white;
-      position: absolute;
-      right: -14px;
-      bottom: 0;
+    &:hover{
+      opacity: .7;
     }
   }
-  &__arrow {
-    .next {
-      position: absolute;
-      top: 50%;
-      right: -10px;
-      transform: translateY(-50%);
-      background: $white;
-      z-index: 2;
-    }
+  &._lg{
+    font-size: 35px;
   }
 }
 .avatar {

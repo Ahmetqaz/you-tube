@@ -3,9 +3,11 @@
   flex-direction: column;
   overflow: hidden;
   min-height: 100%;
+  padding-top: 124px;
+  padding: 124px 0 50px;
   &__content {
-    padding-left: 246px;
-    padding: 124px 0 0 234px;
+    // padding-left: 246px;
+    padding: 0 0 0 246px;
   }
 }
 .autoContainer {
@@ -120,9 +122,9 @@
         object-fit: cover;
         @include transition;
         animation-name: fade;
-        animation-duration: .3s;
+        animation-duration: 0.3s;
         &:nth-child(2) {
-         display: none;
+          display: none;
         }
       }
     }
@@ -141,6 +143,7 @@
   font-size: 18px;
   line-height: 1;
   transition: all 0.3s ease;
+  font-family: $font-primary;
 
   &--primary {
     border-radius: 0.5em;
@@ -157,7 +160,17 @@
       color: $white;
     }
   }
-
+  &--secondary {
+    font-size: 14px;
+    padding: 0.75em 1.25em;
+    border-radius: 18px;
+    color: $white;
+    background: $primary;
+    &:hover {
+      color: $black;
+      background: $gray;
+    }
+  }
   &--ico {
     padding: unset;
     position: relative;
@@ -172,7 +185,63 @@
       }
     }
   }
-
+  &--bg {
+    background: rgba($black-3-rgb, 0.05);
+    border-radius: 18px;
+    padding: 0.3em 0.8em 0.3em;
+    .text {
+      font-weight: 500;
+      font-size: 0.78em;
+      margin-left: 14px;
+    }
+    hr {
+      height: 24px;
+      width: 1px;
+      background: rgba($black-3-rgb, 0.1);
+      margin: 0 14px;
+    }
+    .ico {
+      font-size: 18px;
+      transition: 0.3s ease-in-out;
+    }
+    &._sm {
+      .text {
+        margin-left: 0;
+      }
+    }
+    &._smIco {
+      padding: 0.3em 0.61em;
+      color: $black;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+    &._like {
+      cursor: unset;
+      &:hover{
+        opacity: 1;
+      }
+      .ico {
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  &--icoLg {
+    width: 55px;
+    height: 55px;
+    background: $primary;
+    border-radius: 50%;
+    .ico {
+      font-size: 28px;
+      color: $gray;
+    }
+    &:hover{
+      opacity: .7;
+    }
+  }
   &:active {
     opacity: 0.7;
   }

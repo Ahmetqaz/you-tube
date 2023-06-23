@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -9,6 +9,8 @@
   transition-property: opacity, transform, padding;
   border-bottom: 1px solid;
   border-color: rgba($black-3-rgb, 0.25);
+  z-index: 5;
+  background: $white;
   &__inner {
     position: relative;
     display: flex;
