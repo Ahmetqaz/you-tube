@@ -1,4 +1,4 @@
-:root[data-theme="light"] {
+:root {
   --primary: #0b0b0e;
   --primary-rgb: 11, 11, 14;
   --white: #fff;
@@ -8,17 +8,6 @@
   --black: #0b0b0e;
   --black-2: #282828;
   --black-3-rgb: 0, 0, 0;
-}
-:root[data-theme="dark"] {
-  --primary: #fff;
-  --primary-rgb: 255, 255, 255;
-  --white: #0b0b0e;
-  --white-rgb: 0, 0, 0;
-  --gray: #1b1b1b;
-  --gray-2: #ada6ae;
-  --black: #fff;
-  --black-2: #d7d7d7;
-  --black-3-rgb: 255, 255, 255;
 }
 
 $primary: var(--primary);

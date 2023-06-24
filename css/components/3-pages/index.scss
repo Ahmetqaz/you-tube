@@ -19,7 +19,6 @@
       .gridItem {
         min-width: 300px;
       }
-    
     }
   }
   &Item {
@@ -141,22 +140,25 @@
         font-weight: 500;
       }
     }
-    &-grid{
+    &-grid {
       position: relative;
       &::before {
         content: "";
         width: 130px;
         height: 100%;
-        background: linear-gradient(270deg, $white 18.02%, rgba($black-3-rgb, 0.00) 100%);
+        background: linear-gradient(
+          270deg,
+          $white 18.02%,
+          rgba($black-3-rgb, 0) 100%
+        );
         position: absolute;
         right: 0;
         bottom: 0;
         z-index: 2;
       }
-      
     }
-    .button{
-      &--icoLg{
+    .button {
+      &--icoLg {
         position: absolute;
         bottom: 0;
         right: -28px;
@@ -184,18 +186,21 @@
     }
   }
   &._slider {
-      &::before {
-        content: "";
-        width: 130px;
-        height: 100%;
-        background: linear-gradient(270deg, $white 18.02%, rgba($black-3-rgb, 0.00) 100%);
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 2;
-      }
+    &::before {
+      content: "";
+      width: 130px;
+      height: 100%;
+      background: linear-gradient(
+        270deg,
+        $white 18.02%,
+        rgba($black-3-rgb, 0) 100%
+      );
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
   }
-
 }
 .arrows {
   font-size: 24px;
@@ -208,14 +213,14 @@
     font-size: inherit;
     @include transition;
     cursor: pointer;
-    .ico{
+    .ico {
       font-size: inherit;
     }
-    &:hover{
-      opacity: .7;
+    &:hover {
+      opacity: 0.7;
     }
   }
-  &._lg{
+  &._lg {
     font-size: 35px;
   }
 }
@@ -233,5 +238,54 @@
   &._sm {
     width: 28px;
     height: 28px;
+  }
+}
+
+@mixin index-1760 {
+  .grid {
+    &__row {
+      gap: 30px 20px;
+    }
+    &Item {
+      width: calc(25% - 15px);
+      max-width: unset;
+    }
+  }
+}
+@mixin index-1350 {
+  .avatar {
+    width: 45px;
+    height: 45px;
+  }
+  .row {
+    &__body {
+      &._avatars {
+        .avatar {
+          min-width: 45px;
+        }
+      }
+    }
+  }
+  .grid {
+    &__row {
+      gap: 30px 20px;
+      &._sm {
+        gap: 20px;
+        .gridItem {
+          min-width: 270px;
+        }
+      }
+    }
+    &Item {
+      width: calc(33.3% - 15px);
+      max-width: unset;
+    }
+  }
+  .video {
+    &__inner {
+      &-content {
+        padding-bottom: 40%;
+      }
+    }
   }
 }

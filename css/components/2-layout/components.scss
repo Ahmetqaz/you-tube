@@ -11,12 +11,12 @@
   }
 }
 .autoContainer {
-  max-width: 1715px;
+  max-width: 1675px;
   margin: 0 auto;
   padding: 0 30px;
   &--lg {
-    padding: 0 40px;
-    max-width: 2000px;
+    padding: 0 30px;
+    max-width: 1920px;
     width: 100%;
   }
 }
@@ -218,7 +218,7 @@
     }
     &._like {
       cursor: unset;
-      &:hover{
+      &:hover {
         opacity: 1;
       }
       .ico {
@@ -238,8 +238,8 @@
       font-size: 28px;
       color: $gray;
     }
-    &:hover{
-      opacity: .7;
+    &:hover {
+      opacity: 0.7;
     }
   }
   &:active {
@@ -550,5 +550,21 @@
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+@mixin components-1350 {
+  .main {
+    padding-top: 115px;
+    padding: 110px 0 40px;
+    &__content {
+      padding-left: 230px;
+    }
+  }
+  .button {
+    font-size: 17px;
+  }
+  .input{
+    font-size: 20px;
   }
 }
