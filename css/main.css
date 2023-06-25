@@ -1379,6 +1379,7 @@ svg {
   overflow: hidden;
   width: calc(20% - 25px);
   max-width: 300px;
+  cursor: pointer;
 }
 .gridItem__body {
   padding-bottom: 54%;
