@@ -152,10 +152,10 @@
     background: $gray;
     white-space: nowrap;
     &:hover {
-      background: $primary;
+      background: rgba($black-3-rgb, 0.5);
       color: $white;
     }
-    &._active {
+    &.active {
       background: $primary;
       color: $white;
     }
