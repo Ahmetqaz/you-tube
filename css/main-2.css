@@ -651,7 +651,7 @@ svg {
   height: 58px;
   background-color: var(--primary);
   border-radius: 35px;
-  cursor: pointer;
+  pointer-events: none;
 }
 .input--toggle .slider {
   position: absolute;
@@ -1335,6 +1335,8 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 144px;
+  margin: 0 auto;
 }
 
 .grid__inner .row:nth-child(1) {

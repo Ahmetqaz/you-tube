@@ -104,7 +104,7 @@
       height: 58px;
       background-color: $primary;
       border-radius: 35px;
-      cursor: pointer;
+      pointer-events: none;
     }
     .slider {
       position: absolute;
@@ -564,7 +564,7 @@
   .button {
     font-size: 17px;
   }
-  .input{
+  .input {
     font-size: 20px;
   }
 }
