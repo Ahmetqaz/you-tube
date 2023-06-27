@@ -2,35 +2,37 @@
   &__inner {
     .row {
       &:nth-child(1) {
-        margin-bottom: 10px;
+        margin-bottom: 0.5rem;
       }
     }
   }
   &__row {
-    padding: 24px 0;
+    padding: 1rem 0;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 48px 30px;
+    gap: 1.5rem;
     &._sm {
       overflow: auto;
-      gap: 24px;
+      gap: 1.2rem;
       flex-wrap: nowrap;
       .gridItem {
-        min-width: 300px;
+        min-width: 15rem;
+        border-radius: .5rem;
+        &__body{
+        padding-bottom: unset;
+        }
       }
     }
   }
   &Item {
     position: relative;
-    border-radius: 10px;
+    border-radius: .5rem;
     overflow: hidden;
-    width: calc(20% - 25px);
-    max-width: 300px;
+    width: calc(20% - 1.25rem);
+    // max-width: 15rem;
     cursor: pointer;
-    &__body {
-      padding-bottom: 54%;
-    }
+    height:8.1rem ;
     &__box {
       width: 100%;
       position: absolute;
@@ -38,15 +40,15 @@
       left: 0;
       background: rgba($black-3-rgb, 0.65);
       display: flex;
-      padding: 8px 10px;
+      padding: .4rem .5rem;
       align-items: center;
-      gap: 10px;
-      border-radius: 10px;
+      gap: .5rem;
+      border-radius: .5rem;
       @include transition;
       &-info {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: .4rem;
       }
     }
     &__bg {
@@ -88,7 +90,7 @@
             }
           }
           &__box {
-            padding: 8px 10px 15px;
+            padding: .4rem .5rem .75rem;
           }
         }
       }
@@ -99,14 +101,14 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: .5rem;
     position: relative;
     &-content {
       width: 100%;
-      padding-bottom: 32%;
       position: relative;
       border-radius: 10px;
       overflow: auto;
+      height: 29rem;
       iframe {
         position: absolute;
         top: 0;
@@ -118,24 +120,23 @@
     &-group {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 0.5rem;
       h4 {
         font-weight: 600;
       }
       .avatar {
-        width: 40px;
-        height: 40px;
+        width: 2rem;
+        height: 2rem;
       }
     }
     &-box {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: .6rem;
       &-info {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-
+        gap: .4rem;
         h5 {
           color: $primary;
           font-weight: 500;
@@ -154,15 +155,15 @@
     }
     &-buttons {
       display: flex;
-      gap: 8px;
+      gap: .4rem;
     }
     &-info {
-      padding: 12px;
+      padding: .6rem;
       background: rgba($black-3-rgb, 0.05);
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      border-radius: 12px;
+      gap: .4rem;
+      border-radius: .6rem;
       h5 {
         font-weight: 500;
       }
@@ -197,18 +198,18 @@
 .row {
   position: relative;
   &__body {
-    padding: 16px 0;
+    padding: 0.8rem 0;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: .75rem;
     overflow: auto;
     &._avatars {
-      gap: 28px;
+      gap: 1.4rem;
       border-top: 1px solid;
       border-bottom: 1px solid;
       border-color: rgba($black-3-rgb, 0.25);
       .avatar {
-        min-width: 52px;
+        min-width: 2.6rem;
       }
     }
   }
@@ -230,7 +231,7 @@
   }
 }
 .arrows {
-  font-size: 24px;
+  font-size: 1.2rem;
   .next {
     position: absolute;
     top: 50%;
@@ -248,12 +249,12 @@
     }
   }
   &._lg {
-    font-size: 35px;
+    font-size: 1.75rem;
   }
 }
 .avatar {
-  width: 52px;
-  height: 52px;
+  width: 2.6rem;
+  height: 2.6rem;
   display: flex;
   border-radius: 50%;
   overflow: hidden;
@@ -263,17 +264,14 @@
     object-fit: cover;
   }
   &._sm {
-    width: 28px;
-    height: 28px;
+    width: 1.4rem;
+    height: 1.4rem;
   }
 }
 @mixin index-1760 {
   .grid {
-    &__row {
-      gap: 30px 20px;
-    }
     &Item {
-      width: calc(25% - 15px);
+      width: calc(25% - 1.2rem);
       max-width: unset;
     }
   }
