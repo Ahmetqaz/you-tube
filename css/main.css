@@ -1055,7 +1055,7 @@ svg {
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-  border-radius: 0, 5rem;
+  border-radius: 0.5rem;
 }
 .sidebar__inner-link .ico {
   font-size: 1.6rem;
